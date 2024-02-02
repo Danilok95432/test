@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 76px;
+    background: #fff;
+    border-bottom: 1px solid #BDBEC0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer{
+
+}
