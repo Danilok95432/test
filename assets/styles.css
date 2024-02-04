@@ -102,21 +102,16 @@
         flex-direction: column;
     }
 
+    #pagination{
+        display: none;
+    }
+
     #slider_img_2{
         height: 50%;
     }
 
-    #swiper{
-        height: none;
-    }
-
-    #slider{
-        height: auto;
-    }
-
     #slide{
         display: flex;
-        height: auto;
         position: relative;
         justify-content: center;
         align-items: center;
@@ -192,12 +187,10 @@
 
     #prev{
         padding: 0;
-        top: 40%;
     }
 
     #next{
         padding: 0;
-        top: 40%;
     }
 
     #section_about{
@@ -236,6 +229,10 @@
 
     #benefit{
         width: auto;
+    }
+
+    #pagination{
+        display: none;
     }
 }
 
@@ -427,14 +424,12 @@ header{
 
 .slider{
     width: 100%;
-    height: 700px;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .swiper {
     width: 100%;
-    height: 700px;
   }
 
 .swiper-pagination-bullet{
@@ -459,7 +454,6 @@ header{
 
 .slide{
     width: 100%;
-    height: 700px;
     background: url('./img/slider_img.jpg');
     display: flex;
     flex-direction: row;
