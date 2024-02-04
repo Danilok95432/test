@@ -1,7 +1,273 @@
+@font-face {
+    font-family: Roboto;
+    src: url(font/Roboto-Regular.ttf);
+}
+
+@media screen and (max-width: 769px) {
+    #sect_header{
+        height: auto;
+    }
+    
+    #header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    #cards{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #section_about{
+        padding-top: 0px;
+    }
+
+    #about{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #about img{
+        width: 90%;
+        height: 90%;
+    }
+
+    #about_text{
+        width: 100%;
+    }
+
+    #deliever_block{
+        flex-direction: column;
+    }
+
+    #description_deliever_block{
+        width: 100%;
+    }
+
+    #description_deliever{
+        padding: 20px;
+    }
+
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    #container_nav{
+        
+    }
+
+    #nav_ul{
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #benefits{
+        flex-direction: column;
+        gap: 20px;
+        padding: 45px 0;
+    }
+
+    #benefit{
+        width: 80%;
+        margin: auto;
+    }
+
+    #modal-window{
+        width: 100%;
+    }
+
+    #modal-congratulation{
+        width: 100%;
+    }
+
+    #footer_nav{
+        height: auto;
+    }
+
+    #footer_nav ul{
+        justify-content: center;
+        align-items: center;
+    }
+
+    #top-block-footer{
+        flex-direction: column;
+    }
+
+    #bottom-block-footer{
+        flex-direction: column;
+    }
+
+    #slider_img_2{
+        height: 50%;
+    }
+
+    #swiper{
+        height: none;
+    }
+
+    #slider{
+        height: auto;
+    }
+
+    #slide{
+        display: flex;
+        height: auto;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    #description-slide{
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        padding: 0;
+    }
+
+    #slide-text{
+        font-size: 18px;
+        font-weight: 800;
+    }
+
+    #prev{
+        padding: 0;
+        top: 60%;
+    }
+
+    #next{
+        padding: 0;
+        top: 60%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+
+    #cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #slider_img_2{
+        height: 50%;
+    }
+
+    #swiper{
+        height: none;
+    }
+
+    #slider{
+        height: auto;
+    }
+
+    #slide{
+        display: flex;
+        height: auto;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    #description-slide{
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        padding: 0;
+    }
+
+    #slide-text{
+        font-size: 18px;
+        font-weight: 800;
+    }
+
+    #prev{
+        padding: 0;
+        top: 40%;
+    }
+
+    #next{
+        padding: 0;
+        top: 40%;
+    }
+
+    #section_about{
+        padding-top: 0px;
+    }
+
+    #about{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #about img{
+        width: 90%;
+        height: 90%;
+    }
+
+    #about_text{
+        width: 100%;
+    }
+
+    #deliever_block{
+        flex-direction: column;
+    }
+
+    #description_deliever_block{
+        width: 100%;
+    }
+
+    #description_deliever{
+        padding: 20px;
+    }
+
+    #benefits{
+        flex-wrap: wrap;
+    }
+
+    #benefit{
+        width: auto;
+    }
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.slide-text{
+    color: #ffffff; 
+    text-transform: uppercase; 
+    font-size: 20px; 
+    font-weight: 600;
+}
+
+.slide-text-green{
+    color: #6CB71D; 
+    font-size: 64px; 
+    font-weight: 800;
+}
+
+.slide-text-reg{
+    font-size: 64px; 
+    font-weight: 800;
+}
+
+.slide-text-price{
+    font-size: 32px; 
+    font-weight: 800;
 }
 
 
@@ -521,6 +787,7 @@ footer{
 
 /* ----------------------- */
 
+/* MODAL */
 .modal{
     position: fixed;
     width: 100%;
@@ -530,6 +797,7 @@ footer{
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .modal-window{
@@ -537,7 +805,14 @@ footer{
     width: 500px;
     height: 400px;
     background: #fff;
-    z-index: 1000;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content{
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -556,12 +831,11 @@ footer{
 }
 
 .modal-window form{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 40px;
+    gap: 20px;
 }
 
 .modal-window span{
@@ -569,8 +843,8 @@ footer{
 }
 
 .modal-window button{
+    width: 156px;
     padding: 8px 26px;
-    background: #6CB71D;
     color: #ffffff;
     font-family: Roboto;
     font-size: 15px;
@@ -580,19 +854,42 @@ footer{
     text-align: center;
     border: none;
     border-radius: 10px;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.active{
+    background: #6CB71D;
     cursor: pointer;
 }
 
+.name_cont{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.phone_cont{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
 #name{
-    width: 80%;
+    width: 100%;
+    height: 40px;
     border: 1px solid #E4E4E4;
     margin: auto;
+    border-radius: 2px;
 }
 
 #phone_form{
-    width: 80%;
+    width: 100%;
+    height: 40px;
     border: 1px solid #E4E4E4;
     margin: auto;
+    border-radius: 2px;
 }
 
 .overlay{
@@ -605,3 +902,34 @@ footer{
     opacity: 0.5;
     z-index: 100;
 }
+
+.modal-congratulation{
+    display: none;
+    position: relative;
+    width: 500px;
+    height: 250px;
+    background: #fff;
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-congratulation button{
+    width: 156px;
+    padding: 8px 26px;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+    background: #6CB71D;
+    cursor: pointer;
+}
+
+/* ----------------------- */
